@@ -1,0 +1,171 @@
+Red Winged Blackbird
+Brown Pelican
+Western Wood Pewee
+American Pipit
+Whip Poor Will
+Horned Puffin
+White Necked Raven
+American Redstart
+Rusty Blackbird
+Loggerhead Shrike
+Great Grey Shrike
+Baird Sparrow
+Black Throated Sparrow
+Brewer Sparrow
+Chipping Sparrow
+Clay Colored Sparrow
+Grasshopper Sparrow
+Field Sparrow
+Henslow Sparrow
+Le Conte Sparrow
+Lincoln Sparrow
+Nelson Sharp Tailed Sparrow
+Savannah Sparrow
+Seaside Sparrow
+Song Sparrow
+Bobolink
+Common Raven
+Tree Sparrow
+Vesper Sparrow
+White Crowned Sparrow
+White Throated Sparrow
+Cape Glossy Starling
+Bank Swallow
+Barn Swallow
+Scarlet Tanager
+Indigo Bunting
+Summer Tanager
+Common Tern
+Elegant Tern
+Forsters Tern
+Least Tern
+Green Tailed Towhee
+Brown Thrasher
+Lazuli Bunting
+Sage Thrasher
+Black Capped Vireo
+Blue Headed Vireo
+Philadelphia Vireo
+Bay Breasted Warbler
+Black And White Warbler
+Painted Bunting
+Cape May Warbler
+Cerulean Warbler
+Chestnut Sided Warbler
+Kentucky Warbler
+Magnolia Warbler
+Cardinal
+Mourning Warbler
+Myrtle Warbler
+Nashville Warbler
+Orange Crowned Warbler
+Palm Warbler
+Black Throated Blue Warbler
+Prairie Warbler
+Prothonotary Warbler
+Swainson Warbler
+Tennessee Warbler
+Spotted Catbird
+Wilson Warbler
+Worm Eating Warbler
+Blue Winged Warbler
+Northern Waterthrush
+Louisiana Waterthrush
+Bohemian Waxwing
+Cedar Waxwing
+American Three Toed Woodpecker
+Pileated Woodpecker
+Red Bellied Woodpecker
+Red Headed Woodpecker
+Downy Woodpecker
+Bewick Wren
+Cactus Wren
+Carolina Wren
+Winter Wren
+Laysan Albatross
+Yellow Breasted Chat
+Common Yellowthroat
+Eastern Towhee
+Chuck Will Widow
+Brandt Cormorant
+Pelagic Cormorant
+Bronzed Cowbird
+Shiny Cowbird
+Brown Creeper
+American Crow
+Sooty Albatross
+Fish Crow
+Black Billed Cuckoo
+Mangrove Cuckoo
+Yellow Billed Cuckoo
+Gray Crowned Rosy Finch
+Purple Finch
+Northern Flicker
+Acadian Flycatcher
+Groove Billed Ani
+Olive Sided Flycatcher
+Scissor Tailed Flycatcher
+Vermilion Flycatcher
+Yellow Bellied Flycatcher
+Northern Fulmar
+Gadwall
+American Goldfinch
+Boat Tailed Grackle
+Crested Auklet
+Eared Grebe
+Pied Billed Grebe
+Western Grebe
+Evening Grosbeak
+Pine Grosbeak
+Rose Breasted Grosbeak
+Pigeon Guillemot
+California Gull
+Least Auklet
+Glaucous Winged Gull
+Ring Billed Gull
+Slaty Backed Gull
+Western Gull
+Anna Hummingbird
+Ruby Throated Hummingbird
+Rufous Hummingbird
+Parakeet Auklet
+Green Violetear
+Long Tailed Jaeger
+Pomarine Jaeger
+Florida Jay
+Green Jay
+Dark Eyed Junco
+Tropical Kingbird
+Gray Kingbird
+Belted Kingfisher
+Rhinoceros Auklet
+Pied Kingfisher
+Green Kingfisher
+White Breasted Kingfisher
+Red Legged Kittiwake
+Horned Lark
+Pacific Loon
+Mallard
+Western Meadowlark
+Hooded Merganser
+Brewer Blackbird
+Mockingbird
+Nighthawk
+Clark Nutcracker
+White Breasted Nuthatch
+Baltimore Oriole
+Hooded Oriole
+Scott Oriole
+Canada Warbler
+Hooded Warbler
+Gray Catbird
+European Goldfinch
+Red Faced Cormorant
+Red Breasted Merganser
+Red Cockaded Woodpecker
+Blue Grosbeak
+Blue Jay
+Artic Tern
+Black Footed Albatross
+Cliff Swallow
+White Pelican
