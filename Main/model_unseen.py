@@ -18,8 +18,8 @@ from keras.utils import to_categorical, np_utils
 WORD2VECPATH = "new_class_vectors.npy"
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 column_names = ['index', 'image_feature', 'text_embedding', 'class']
-DATAPATH = os.path.join(parent_dir, "finaldataset.csv")
-MODELPATH = os.path.join(parent_dir, "Model/")  # "/model/"
+DATAPATH = os.path.join(parent_dir, "dataset.csv")
+MODELPATH = os.path.join(parent_dir, "Model/Weights/UnseenClasses")  # "/model/"
 
 
 def save_keras_model(model, model_path):
@@ -75,10 +75,7 @@ def load_data():
     get_dataframe()
     X_train, Y_train = train_df.iloc[:, :-1].values, train_df.iloc[:, -1].values
     X_test, Y_test = zsl_df.iloc[:, :-1].values, zsl_df.iloc[:, -1].values
-    # L2 NORMALIZE X_TRAIN
-    # X_train = normalize(X_train, norm='l2')
-    # X_test = normalize(X_test, norm='l2')
-
+    
     label_encoder = LabelEncoder()
     label_encoder.fit(train_classes)
 
@@ -170,7 +167,7 @@ def main():
 
     # SET HYPERPARAMETERS
     global NUM_CLASS, NUM_ATTR, EPOCH, BATCH_SIZE
-    NUM_CLASS = 171 #156
+    NUM_CLASS = 171 
     NUM_ATTR = 300
     BATCH_SIZE = 512
     EPOCH = 180
@@ -190,8 +187,6 @@ def main():
 
     print("\n-----------------------model training is completed.-----------------------")
 
-    # ---------------------------------------------------------------------------------------------------------------- #
-    # ---------------------------------------------------------------------------------------------------------------- #
     # CREATE AND SAVE ZSL MODEL
 
     inp = model.input
@@ -200,8 +195,6 @@ def main():
     save_keras_model(zsl_model, model_path=MODELPATH)
     #plot_model(zsl_model, to_file='zsl_model_plot.png', show_shapes=True, show_layer_names=True)
 
-    # ---------------------------------------------------------------------------------------------------------------- #
-    # ---------------------------------------------------------------------------------------------------------------- #
     # EVALUATION OF ZERO-SHOT LEARNING PERFORMANCE
 
     class_vectors = sorted(np.load(WORD2VECPATH, allow_pickle=True), key=lambda x: x[0])
