@@ -16,11 +16,11 @@ from keras.layers import BatchNormalization
 from keras.optimizers import Adam
 from keras.utils import to_categorical, np_utils
 
-WORD2VECPATH = "new_class_vectors.npy"
+WORD2VECPATH = "class_vectors.npy"
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 column_names = ['index', 'image_feature', 'text_embedding', 'class']
-DATAPATH = os.path.join(parent_dir, "finaldataset.csv")
-MODELPATH = os.path.join(parent_dir, "Model/")  # "/model/"
+DATAPATH = os.path.join(parent_dir, "dataset.csv")
+MODELPATH = os.path.join(parent_dir, "Model/Weights/SeenClasses")  # "/model/"
 
 def load_keras_model(model_path):
     with open(model_path +"model.json", 'r') as json_file:
@@ -83,15 +83,9 @@ def get_dataframe():
 
 def load_data():
     get_dataframe()
-    #X_train, Y_train = train_df.iloc[:, :-1].values, train_df.iloc[:, -1].values
-    #X_test, Y_test = zsl_df.iloc[:, :-1].values, zsl_df.iloc[:, -1].values
-
+    
     X, Y = train_df.iloc[:, :-1].values, train_df.iloc[:, -1].values
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.30, random_state=42)
-
-    # L2 NORMALIZE X_TRAIN
-    # X_train = normalize(X_train, norm='l2')
-    # X_test = normalize(X_test, norm='l2')
 
     label_encoder = LabelEncoder()
     label_encoder.fit(train_classes)
@@ -149,8 +143,6 @@ def build_model():
 
     inputs2 = Input(shape=(1024,))
     decoder1 = add([fe5, inputs2])
-    #batch2 = BatchNormalization()(decoder1)
-    #dr6 = Dropout(0.8)(batch2)
     decoder2 = Dense(800, activation='relu')(decoder1)
     dr7 = Dropout(0.5)(decoder2)
     decoder3 = Dense(512, activation='relu')(dr7)
@@ -184,7 +176,7 @@ def main():
 
     # SET HYPERPARAMETERS
     global NUM_CLASS, NUM_ATTR, EPOCH, BATCH_SIZE
-    NUM_CLASS = 171 #156
+    NUM_CLASS = 171 
     NUM_ATTR = 300
     BATCH_SIZE = 512
     EPOCH = 180
@@ -194,8 +186,7 @@ def main():
     (train_image_feature, train_text_feature, Y_train_cat), (
         test_image_feature, test_text_feature, Y_test) = load_data()
     model = build_model()
-    #plot_model(model, to_file='train_model_plot.png', show_shapes=True, show_layer_names=True)
-
+    
     history = model.fit([train_image_feature, train_text_feature], Y_train_cat,
                         epochs=EPOCH,
                         batch_size=BATCH_SIZE,
@@ -204,19 +195,14 @@ def main():
 
     print("\n-----------------------model training is completed.-----------------------")
 
-    # ---------------------------------------------------------------------------------------------------------------- #
-    # ---------------------------------------------------------------------------------------------------------------- #
-    # CREATE AND SAVE ZSL MODEL
+    # CREATE AND SAVE THE MODEL
 
     inp = model.input
     out = model.layers[-2].output
     zsl_model = Model(inp, out)
     save_keras_model(zsl_model, model_path=MODELPATH)
-    #plot_model(zsl_model, to_file='zsl_model_plot.png', show_shapes=True, show_layer_names=True)
-
-    # ---------------------------------------------------------------------------------------------------------------- #
-    # ---------------------------------------------------------------------------------------------------------------- #
-    # EVALUATION OF ZERO-SHOT LEARNING PERFORMANCE
+    
+    # EVALUATION OF MODEL PERFORMANCE
 
     class_vectors = sorted(np.load(WORD2VECPATH, allow_pickle=True), key=lambda x: x[0])
     classnames, vectors = zip(*class_vectors)
