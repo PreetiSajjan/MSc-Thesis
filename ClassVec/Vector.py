@@ -36,7 +36,7 @@ class Word2vec():
 import pandas as pd
 
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
-path = os.path.join(parent_dir, "finaldataset.csv")
+path = os.path.join(parent_dir, "dataset.csv")
 column_names = ['index', 'image_feature', 'text_embedding', 'class']
 data = pd.read_csv(path, names=column_names, header=None, index_col=[0], skiprows=1)
 print(data.head())
