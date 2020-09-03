@@ -6032,8 +6032,8 @@ pred_labels:  ['Anna Hummingbird', 'Gray Crowned Rosy Finch', 'Ruby Throated Hum
 Actual: Yellow Headed Blackbird
 
 ZERO SHOT LEARNING SCORE
--> Top-10 Accuracy: 0.42
--> Top-5 Accuracy: 0.31
+-> Top-10 Accuracy: 0.40
+-> Top-5 Accuracy: 0.28
 -> Top-3 Accuracy: 0.24
 -> Top-1 Accuracy: 0.18
 
